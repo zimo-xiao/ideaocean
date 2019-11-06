@@ -9,20 +9,8 @@ export default {
       //
     };
   },
-  computed: {
-    user() {
-      return this.$store.state.user;
-    },
-    site() {
-      return this.$store.state.site;
-    },
-    control() {
-      return this.$store.state.control;
-    }
-  },
-  mounted() {
-    this.control.header = true;
-  }
+  computed: {},
+  mounted() {}
 };
 </script>
 
