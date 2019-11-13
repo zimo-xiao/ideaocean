@@ -7,7 +7,7 @@
         <img src="../assets/logo.png" />
         <p class="title">Idea Ocean</p>
         <p class="description">The Place for Project Prompts</p>
-        <div class="functionBar">
+        <div class="functionBar shadow">
           <a-input-search
             placeholder="input search text"
             @search="onSearch"
@@ -19,6 +19,7 @@
           <a-button
             type="primary"
             size="large"
+            @click="control.composer = true"
             :style="{ position: 'relative', top: '0px', left: '0px', marginTop: '25px', marginBottom: '25px', marginLeft: '2%', width: '16%' }"
             ghost
           >
@@ -26,7 +27,7 @@
           </a-button>
         </div>
         <p class="guide">
-          diver right in
+          dive right in
           <br />
           <a-icon type="down" />
         </p>
@@ -45,13 +46,19 @@
 </template>
 
 <script>
+import store from "../store";
+
 export default {
   data: function() {
     return {
       primaryElemHeight: "700px"
     };
   },
-  computed: {},
+  computed: {
+    control() {
+      return store.state.control;
+    }
+  },
   mounted() {}
 };
 </script>
@@ -105,7 +112,6 @@ export default {
   background-color: white;
   position: relative;
   margin: 0px;
-  box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
 }
 
 .primaryHeaderCenterContent .guide {
