@@ -6,7 +6,8 @@ Vue.use(Vuex)
 const store = new Vuex.Store({
     state: {
         control: {
-            composer: false
+            composer: false,
+            project: true
         }
     }
 })

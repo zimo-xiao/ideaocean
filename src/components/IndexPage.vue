@@ -39,7 +39,7 @@
       <a-row style="margin-bottom: 100px">
         <a-col :span="6" v-for="index in 10" :key="index">
           <a-card title="Default size card" class="card">
-            <a href="#" slot="extra">more</a>
+            <a href="#" slot="extra">view</a>
             <p>card content</p>
             <p>card content</p>
             <p>card content</p>

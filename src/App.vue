@@ -2,6 +2,7 @@
   <div id="app">
     <a-layout>
       <Header />
+      <Project />
       <Composer />
       <router-view />
       <Footer />
@@ -13,13 +14,15 @@
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import Composer from "./components/Composer.vue";
+import Project from "./components/Project.vue";
 
 export default {
   name: "app",
   components: {
     Header,
     Footer,
-    Composer
+    Composer,
+    Project
   }
 };
 </script>
