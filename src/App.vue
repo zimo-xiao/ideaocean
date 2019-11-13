@@ -51,4 +51,47 @@ export default {
 .shadow {
   box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
 }
+
+p {
+  word-break: break-all;
+}
+
+.floatWindow {
+  position: fixed;
+  top: 10%;
+  left: 25%;
+  width: 50%;
+  height: 80%;
+  background-color: white;
+  z-index: 1001;
+  border-radius: 2px;
+  overflow: scroll;
+}
+
+a-input {
+  margin-bottom: 25px;
+}
+
+a-textarea {
+  margin-bottom: 25px;
+}
+
+.floatBackground {
+  position: fixed;
+  top: 0%;
+  left: 0%;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+  z-index: 1000;
+  opacity: 0.4;
+}
+
+.floatWindow .container {
+  float: left;
+  width: 90%;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 5%;
+}
 </style>
