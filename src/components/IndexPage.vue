@@ -9,7 +9,7 @@
         <p class="description">The Place for Project Prompts</p>
         <div class="functionBar shadow">
           <a-input-search
-            placeholder="input search text"
+            placeholder="what do you want to search?"
             @search="onSearch"
             enterButton="Search"
             size="large"
@@ -35,12 +35,18 @@
     </div>
     <a-layout-content :style="{ padding: '0 0px', margin: '0px' }">
       <div :style="{ width: '100%', height: primaryElemHeight}"></div>
-      <a-breadcrumb :style="{ margin: '16px 0' }">
-        <a-breadcrumb-item>Home</a-breadcrumb-item>
-        <a-breadcrumb-item>List</a-breadcrumb-item>
-        <a-breadcrumb-item>App</a-breadcrumb-item>
-      </a-breadcrumb>
-      <div :style="{ background: '#fff', padding: '24px', minHeight: '3080px' }">Content</div>
+      <!-- cards start -->
+      <a-row style="margin-bottom: 100px">
+        <a-col :span="6" v-for="index in 10" :key="index">
+          <a-card title="Default size card" class="card">
+            <a href="#" slot="extra">more</a>
+            <p>card content</p>
+            <p>card content</p>
+            <p>card content</p>
+          </a-card>
+        </a-col>
+      </a-row>
+      <!-- cards end -->
     </a-layout-content>
   </div>
 </template>
@@ -124,5 +130,10 @@ export default {
   margin: 0px;
   color: white;
   font-family: "IdeaFont";
+}
+
+.card {
+  width: 90%;
+  margin: 5%;
 }
 </style>
