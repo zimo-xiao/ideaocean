@@ -21,8 +21,15 @@
             size="large"
             :style="{ position: 'relative', top: '0px', left: '0px', marginTop: '25px', marginBottom: '25px', marginLeft: '2%', width: '16%' }"
             ghost
-          >Primary</a-button>
+          >
+            <a-icon type="plus" />Add Idea
+          </a-button>
         </div>
+        <p class="guide">
+          diver right in
+          <br />
+          <a-icon type="down" />
+        </p>
       </div>
     </div>
     <a-layout-content :style="{ padding: '0 0px', margin: '0px' }">
@@ -41,7 +48,7 @@
 export default {
   data: function() {
     return {
-      primaryElemHeight: "600px"
+      primaryElemHeight: "700px"
     };
   },
   computed: {},
@@ -83,7 +90,7 @@ export default {
   width: 100%;
   left: 0px;
   top: 0px;
-  font-size: 24px;
+  font-size: 23px;
   position: relative;
   text-align: center;
   margin: 0px;
@@ -93,11 +100,23 @@ export default {
 .primaryHeaderCenterContent .functionBar {
   width: 100%;
   left: 0px;
-  top: 15px;
-  border-radius: 5px;
+  top: 25px;
+  border-radius: 2px;
   background-color: white;
   position: relative;
   margin: 0px;
   box-shadow: 0 1px 6px 0 rgba(32, 33, 36, 0.28);
+}
+
+.primaryHeaderCenterContent .guide {
+  width: 100%;
+  left: 0px;
+  top: 100px;
+  font-size: 18px;
+  position: relative;
+  text-align: center;
+  margin: 0px;
+  color: white;
+  font-family: "IdeaFont";
 }
 </style>
