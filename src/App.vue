@@ -11,6 +11,7 @@
 </template>
 
 <script>
+import store from "./store";
 import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import Composer from "./components/Composer.vue";
@@ -23,6 +24,16 @@ export default {
     Footer,
     Composer,
     Project
+  },
+  computed: {
+    control() {
+      return store.state.control;
+    }
+  },
+  mounted() {
+    if (this.$route.query.idea != undefined) {
+      this.control.project = true;
+    }
   }
 };
 </script>

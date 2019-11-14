@@ -3,13 +3,14 @@
     <div class="floatBackground" @click="control.composer = false"></div>
     <div class="floatWindow shadow">
       <div class="container">
-        <p class="title">Compose Idea</p>
+        <p class="title" v-if="step == 1">Compose Idea</p>
+        <p class="title" v-if="step == 2">Similar Ideas</p>
         <p class="close">
           <a-icon type="close" @click="control.composer = false" />
         </p>
       </div>
       <!-- input start -->
-      <div class="container" style="margin-top: -40px">
+      <div class="container" v-if="step == 1" style="margin-top: -40px">
         <a-input class="input" size="large" placeholder="Title" />
 
         <a-textarea class="input" placeholder="Description" :rows="4" />
@@ -23,10 +24,37 @@
             <a-select-option value="Option2-1">Post As Cornfield Warrior</a-select-option>
             <a-select-option value="Option2-2">Post As Anonymous</a-select-option>
           </a-select>
-          <a-button style="float:right" type="primary">Add Comment</a-button>
+          <a-button style="float:right" type="primary" @click="step = 2">Next Step</a-button>
         </a-input-group>
       </div>
       <!-- input end -->
+
+      <!-- similar idea start -->
+      <div class="container" v-if="step == 2" style="margin-top: -40px">
+        <div class="input" style="width:100%" v-for="index in 4" :key="index">
+          <a href="/#/?idea=1" target="_blank">
+            <a-card title="Default size card" class="card">
+              <a slot="extra">view in new tab</a>
+              <p>card content</p>
+              <p>card content</p>
+              <p>card content</p>
+            </a-card>
+          </a>
+        </div>
+        <div class="input" style="width:100%;margin-bottom:30px;">
+          <a-button
+            style="float:right"
+            type="primary"
+            @click="control.composer = false;control.project = true"
+          >Submit Unique Idea</a-button>
+          <a-button
+            style="float:right;margin-right:10px;"
+            type="default"
+            @click="step = 1"
+          >Last Step</a-button>
+        </div>
+      </div>
+      <!-- similar idea end -->
     </div>
   </div>
 </template>
@@ -36,7 +64,9 @@ import store from "../store";
 
 export default {
   data: function() {
-    return {};
+    return {
+      step: 1
+    };
   },
   computed: {
     control() {
@@ -72,5 +102,11 @@ export default {
 .container .input {
   float: left;
   margin-top: 20px;
+}
+
+.container .card {
+  float: left;
+  margin: 0px;
+  width: 100%;
 }
 </style>
