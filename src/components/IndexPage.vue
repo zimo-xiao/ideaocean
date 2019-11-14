@@ -37,12 +37,10 @@
       <div :style="{ width: '100%', height: primaryElemHeight}"></div>
       <!-- cards start -->
       <a-row style="margin-bottom: 100px">
-        <a-col :span="6" v-for="index in 10" :key="index">
-          <a-card title="Default size card" class="card" @click="control.project = true">
+        <a-col :span="6" v-for="(idea, id) in ideas" :key="id">
+          <a-card :title="idea.title" class="card" @click="control.project = true">
             <a slot="extra">view</a>
-            <p>card content</p>
-            <p>card content</p>
-            <p>card content</p>
+            <p style="height: 100px;overflow:hidden;text-overflow:ellipsis;">{{idea.description}}</p>
           </a-card>
         </a-col>
       </a-row>
@@ -63,6 +61,9 @@ export default {
   computed: {
     control() {
       return store.state.control;
+    },
+    ideas() {
+      return store.state.ideas;
     }
   },
   mounted() {}
