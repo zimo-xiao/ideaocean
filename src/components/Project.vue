@@ -111,11 +111,17 @@
       <!-- content end -->
 
       <!-- comment start -->
-      <div
-        class="container commentSection"
-        style="margin-top:30px;padding:30px;border-style:solid;border-top-width:1px;border-color:grey;"
-      >
+      <div class="container commentSection" style="margin-top:20px;margin-bottom:50px;">
         <a-textarea placeholder="Description" :rows="4" />
+        <div style="float:left;width:100%">
+          <a-button style="float:right;margin-top:20px" type="primary">Add Comment</a-button>
+        </div>
+        <a-card title="Zimo Xiao" class="commentCard">
+          <p>card content</p>
+          <p>card content</p>
+          <p>card content</p>
+          <a-button class="vote" type="default" shape="circle" icon="like"></a-button>
+        </a-card>
       </div>
       <!-- comment end -->
     </div>
@@ -189,5 +195,16 @@ export default {
   width: 42px;
   height: 42px;
   margin-bottom: 10px;
+}
+
+.commentSection {
+  padding-top: 20px;
+  border-top: 1px solid grey;
+}
+
+.commentCard {
+  float: left;
+  margin-top: 20px;
+  width: 100%;
 }
 </style>

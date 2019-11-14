@@ -3,14 +3,17 @@
     <div class="floatBackground" @click="control.composer = false"></div>
     <div class="floatWindow shadow">
       <div class="container">
+        <p class="title">Compose Idea</p>
         <p class="close">
           <a-icon type="close" @click="control.composer = false" />
         </p>
-        <p class="title">Compose Your Idea</p>
       </div>
-      <div class="container" style="margin-top: -20px;">
-        <a-input size="large" placeholder="Title" />
-        <a-textarea placeholder="Description" :rows="4" />
+      <div class="container" style="margin-top: -40px">
+        <a-input class="input" size="large" placeholder="large size" />
+        <a-textarea class="input" placeholder="Description" :rows="4" />
+        <div style="float:left;width:100%">
+          <a-button style="float:right;margin-top:20px" type="primary">Add Comment</a-button>
+        </div>
       </div>
     </div>
   </div>
@@ -32,60 +35,30 @@ export default {
 };
 </script>
 
-<style>
-.floatWindow {
-  position: fixed;
-  top: 10%;
-  left: 25%;
-  width: 50%;
-  height: 80%;
-  background-color: white;
-  z-index: 1001;
-  border-radius: 2px;
-  overflow: scroll;
-}
-
-a-input {
-  margin-bottom: 25px;
-}
-
-a-textarea {
-  margin-bottom: 25px;
-}
-
-.floatBackground {
-  position: fixed;
-  top: 0%;
-  left: 0%;
-  width: 100%;
-  height: 100%;
-  background-color: black;
-  z-index: 1000;
-  opacity: 0.4;
-}
-
-.floatWindow .container {
-  float: left;
-  width: 90%;
-  margin-top: 0px;
-  margin-bottom: 0px;
-  margin-left: 5%;
-}
-
+<style scoped>
 .floatWindow .title {
   float: left;
   font-size: 60px;
   margin-top: 30px;
   margin-left: 0px;
-  font-family: "IdeaHeadlineBold";
+  margin-right: 60px;
+  margin-bottom: 0px;
+  width: calc(100% - 120px);
+  font-family: "IdeaFontBold";
 }
 
 .floatWindow .close {
-  float: right;
+  float: left;
+  width: 60px;
   margin-top: 30px;
   font-size: 60px;
   text-align: center;
   margin-right: 0px;
   color: #777;
+}
+
+.container .input {
+  float: left;
+  margin-top: 20px;
 }
 </style>
