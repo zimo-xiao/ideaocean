@@ -8,13 +8,25 @@
           <a-icon type="close" @click="control.composer = false" />
         </p>
       </div>
+      <!-- input start -->
       <div class="container" style="margin-top: -40px">
-        <a-input class="input" size="large" placeholder="large size" />
+        <a-input class="input" size="large" placeholder="Title" />
+
         <a-textarea class="input" placeholder="Description" :rows="4" />
-        <div style="float:left;width:100%">
-          <a-button style="float:right;margin-top:20px" type="primary">Add Comment</a-button>
-        </div>
+
+        <a-input-group class="input" compact>
+          <a-select defaultValue="Option1-1">
+            <a-select-option value="Option1-1">Category-1</a-select-option>
+            <a-select-option value="Option1-2">Category-2</a-select-option>
+          </a-select>
+          <a-select defaultValue="Option2-2">
+            <a-select-option value="Option2-1">Post As Cornfield Warrior</a-select-option>
+            <a-select-option value="Option2-2">Post As Anonymous</a-select-option>
+          </a-select>
+          <a-button style="float:right" type="primary">Add Comment</a-button>
+        </a-input-group>
       </div>
+      <!-- input end -->
     </div>
   </div>
 </template>
