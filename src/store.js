@@ -9,7 +9,9 @@ const store = new Vuex.Store({
     state: {
         control: {
             composer: false,
-            project: false
+            project: false,
+            login: false,
+            register: false
         },
         ideas: ideas
     }

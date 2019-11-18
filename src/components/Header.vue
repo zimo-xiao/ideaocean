@@ -3,21 +3,48 @@
     class="header"
     :style="{ position: 'fixed', zIndex: 5, width: '100%', backgroundColor: '#FFFFFF', borderBottom: '1px solid #e8e8e8' }"
   >
-    <div class="logo">
-      <img src="../assets/logo.png" />
-      <p>Idea Ocean</p>
-    </div>
-    <a-menu
+    <a href="/#/" style="color:rgba(0, 0, 0, 0.65)">
+      <div class="logo">
+        <img src="../assets/logo.png" />
+        <p>Idea Ocean</p>
+      </div>
+    </a>
+    <!-- <a-menu
       mode="horizontal"
       :defaultSelectedKeys="['2']"
       :style="{ lineHeight: '62px', borderBottom: '0px', backgroundColor: 'transparent' }"
     >
       <a-menu-item key="1">nav 2</a-menu-item>
       <a-menu-item key="2">nav 3</a-menu-item>
-    </a-menu>
+    </a-menu>-->
+
+    <a-button
+      @click="control.register = true"
+      type="primary"
+      class="menuButton"
+      size="large"
+    >Register</a-button>
+    <a-button @click="control.login = true" class="menuButton" size="large">Login</a-button>
   </a-layout-header>
 </template>
-<style>
+
+<script>
+import store from "../store";
+
+export default {
+  data: function() {
+    return {};
+  },
+  computed: {
+    control() {
+      return store.state.control;
+    }
+  },
+  mounted() {}
+};
+</script>
+
+<style scoped>
 .logo {
   height: 64px;
   margin: 0px;
@@ -37,5 +64,11 @@
   font-size: 22px;
   text-align: center;
   font-family: "IdeaHeadlineBold";
+}
+
+.menuButton {
+  height: 40px;
+  margin: 8px 0px 8px 8px;
+  float: right;
 }
 </style>

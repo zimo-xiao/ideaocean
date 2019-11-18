@@ -4,6 +4,8 @@
       <Header />
       <Project />
       <Composer />
+      <Login />
+      <Register />
       <router-view />
       <Footer />
     </a-layout>
@@ -16,6 +18,8 @@ import Header from "./components/Header.vue";
 import Footer from "./components/Footer.vue";
 import Composer from "./components/Composer.vue";
 import Project from "./components/Project.vue";
+import Login from "./components/Login.vue";
+import Register from "./components/Register.vue";
 
 export default {
   name: "app",
@@ -23,7 +27,9 @@ export default {
     Header,
     Footer,
     Composer,
-    Project
+    Project,
+    Register,
+    Login
   },
   computed: {
     control() {

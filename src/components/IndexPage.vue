@@ -8,14 +8,16 @@
         <p class="title">Idea Ocean</p>
         <p class="description">The Place for Project Prompts</p>
         <div class="functionBar shadow">
-          <a-input-search
-            placeholder="what do you want to search?"
-            @search="onSearch"
-            enterButton="Search"
-            size="large"
-            class="search"
-            :style="{ position: 'relative', top: '0px', left: '0px', marginTop: '25px', marginBottom: '25px', marginLeft: '3%', width: '76%' }"
-          />
+          <a href="/#/search">
+            <a-input-search
+              placeholder="what do you want to search?"
+              @search="onSearch"
+              enterButton="Search"
+              size="large"
+              class="search"
+              :style="{ position: 'relative', top: '0px', left: '0px', marginTop: '25px', marginBottom: '25px', marginLeft: '3%', width: '76%' }"
+            />
+          </a>
           <a-button
             type="primary"
             size="large"
@@ -40,7 +42,7 @@
         <a-col :span="6" v-for="(idea, id) in ideas" :key="id">
           <a-card :title="idea.title" class="card" @click="control.project = true">
             <a slot="extra">view</a>
-            <p style="height: 100px;overflow:hidden;text-overflow:ellipsis;">{{idea.description}}</p>
+            <p class="cardContent">{{idea.description}}</p>
           </a-card>
         </a-col>
       </a-row>
@@ -136,5 +138,18 @@ export default {
 .card {
   width: 90%;
   margin: 5%;
+}
+
+.card .cardContent {
+  overflow: hidden;
+  width: calc(100% - 0px);
+  box-sizing: border-box;
+  white-space: pre-wrap;
+  display: -webkit-box;
+  word-break: break-all;
+  text-overflow: ellipsis;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+  height: 60px;
 }
 </style>
