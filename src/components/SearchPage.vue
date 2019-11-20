@@ -3,7 +3,7 @@
     <div class="right">
       <a-input-group class="input" compact>
         <a-input class="box" size="large" placeholder="enter your key words" />
-        <a-select
+        <!-- <a-select
           class="box"
           mode="multiple"
           :defaultValue="[]"
@@ -15,17 +15,17 @@
             v-for="i in 25"
             :key="(i + 9).toString(36) + i"
           >{{(i + 9).toString(36) + i}}</a-select-option>
-        </a-select>
+        </a-select>-->
         <a-button class="box" style="float:right" size="large" type="primary">Search</a-button>
       </a-input-group>
     </div>
     <div class="left">
-      <p class="title">Ideas similar to [Key words]</p>
+      <p class="title">Ideas similar to Community</p>
 
       <a-layout-content :style="{ padding: '0 0px', margin: '0px' }">
         <!-- cards start -->
         <a-row style="margin-bottom: 100px">
-          <a-col :span="8" v-for="(idea, id) in ideas" :key="id">
+          <a-col :span="8" v-for="(idea, id) in search" :key="id">
             <a-card :title="idea.title" class="card" @click="control.project = true">
               <a slot="extra">view</a>
               <p class="cardContent">{{idea.description}}</p>
@@ -49,8 +49,8 @@ export default {
     control() {
       return store.state.control;
     },
-    ideas() {
-      return store.state.ideas;
+    search() {
+      return store.state.search;
     }
   },
   mounted() {}

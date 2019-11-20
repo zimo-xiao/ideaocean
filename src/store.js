@@ -4,6 +4,7 @@ import Vue from 'vue'
 Vue.use(Vuex)
 
 import ideas from './ideas'
+import search from './search'
 
 const store = new Vuex.Store({
     state: {
@@ -13,7 +14,8 @@ const store = new Vuex.Store({
             login: false,
             register: false
         },
-        ideas: ideas
+        ideas: ideas,
+        search: search
     }
 })
 

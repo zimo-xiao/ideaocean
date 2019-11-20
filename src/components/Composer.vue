@@ -16,10 +16,10 @@
         <a-textarea class="input" placeholder="Description" :rows="4" />
 
         <a-input-group class="input" compact>
-          <a-select defaultValue="Option1-1">
+          <!-- <a-select defaultValue="Option1-1">
             <a-select-option value="Option1-1">Category-1</a-select-option>
             <a-select-option value="Option1-2">Category-2</a-select-option>
-          </a-select>
+          </a-select>-->
           <a-select defaultValue="Option2-2">
             <a-select-option value="Option2-1">Post As Cornfield Warrior</a-select-option>
             <a-select-option value="Option2-2">Post As Anonymous</a-select-option>
