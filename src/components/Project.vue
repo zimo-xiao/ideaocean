@@ -24,7 +24,7 @@
               <img src="../assets/user-img.png" class="authorImg" />
               <p class="author">Author Name, created at 2019-10-10</p>
             </div>
-            <p class="description">
+            <p class="description" style="word-break: keep-all">
               First Gentleman
               His daughter, and the heir of's kingdom, whom
               He purposed to his wife's sole son--a widow
