@@ -45,7 +45,7 @@
           <a-button
             style="float:right"
             type="primary"
-            @click="control.composer = false;control.project = true"
+            @click="control.composer = false;control.project = true;step=1;"
           >Submit Unique Idea</a-button>
           <a-button
             style="float:right;margin-right:10px;"
