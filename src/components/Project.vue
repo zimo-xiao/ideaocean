@@ -13,9 +13,10 @@
       <div class="container">
         <a-row>
           <a-col :span="2">
-            <a-button class="vote" type="default" shape="circle" icon="like"></a-button>
-            <a-button class="vote" type="default" shape="circle">200</a-button>
-            <a-button class="vote" type="primary" shape="circle" icon="dislike"></a-button>
+            <!--Hard margin override here because we want the up and down vote to look closer to the number-->
+            <a-button class="vote" type="default" shape="circle" icon="up" style="margin-bottom: 3px"></a-button>
+            <a-button class="voteCount" type="link">200</a-button>
+            <a-button class="vote" type="primary" shape="circle" icon="down" style="margin-top: 3px;"></a-button>
             <a-button class="vote" type="default" shape="circle" icon="pushpin"></a-button>
           </a-col>
           <a-col :span="22">
@@ -195,6 +196,15 @@ export default {
   width: 42px;
   height: 42px;
   margin-bottom: 10px;
+}
+
+.voteCount {
+  width: 42px;
+  height: 35px;
+  padding-left: 0px;
+  padding-right: 0px;
+  color: black;
+  font-size: large;
 }
 
 .commentSection {
