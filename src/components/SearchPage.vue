@@ -26,8 +26,8 @@
         <!-- cards start -->
         <a-row style="margin-bottom: 100px">
           <a-col :span="8" v-for="(idea, id) in search" :key="id">
-            <a-card :title="idea.title" class="card" @click="control.project = true">
-              <a slot="extra">view</a>
+            <a-card :title="idea.title" class="card" @click="control.project = true" hoverable>
+              <icon type="star" slot="extra" @click.stop="onSave"></icon>
               <p class="cardContent">{{idea.description}}</p>
             </a-card>
           </a-col>
@@ -53,7 +53,14 @@ export default {
       return store.state.search;
     }
   },
-  mounted() {}
+  mounted() {},
+  methods: {
+    onSave: function() {
+      // eslint-disable-next-line no-console
+      console.log("A save event is triggered!");
+      // We don't want to show card if save on the search page.
+    }
+  }
 };
 </script>
 
