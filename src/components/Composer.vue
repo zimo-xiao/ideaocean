@@ -11,16 +11,16 @@
       </div>
       <!-- input start -->
       <div class="container" v-if="step == 1" style="margin-top: -40px">
-        <a-input class="input" size="large" placeholder="Title" />
+        <a-input class="input" size="large" v-model="newIdea.title" placeholder="Title" />
 
-        <a-textarea class="input" placeholder="Description" :rows="4" />
+        <a-textarea class="input" v-model="newIdea.description" placeholder="Description" :rows="4" />
 
         <a-input-group class="input" compact>
           <!-- <a-select defaultValue="Option1-1">
             <a-select-option value="Option1-1">Category-1</a-select-option>
             <a-select-option value="Option1-2">Category-2</a-select-option>
           </a-select>-->
-          <a-select defaultValue="Option2-2">
+          <a-select v-model="newIdea.author" defaultValue="Option2-2">
             <a-select-option value="Option2-1">Post As Cornfield Warrior</a-select-option>
             <a-select-option value="Option2-2">Post As Anonymous</a-select-option>
           </a-select>
@@ -45,7 +45,7 @@
           <a-button
             style="float:right"
             type="primary"
-            @click="control.composer = false;control.project = true;step=1;"
+            @click="onSubmitUniqueIdea"
           >Submit Unique Idea</a-button>
           <a-button
             style="float:right;margin-right:10px;"
@@ -65,7 +65,12 @@ import store from "../store";
 export default {
   data: function() {
     return {
-      step: 1
+      step: 1,
+      newIdea : {
+        title : '',
+        description: '',
+        author : ''
+      }
     };
   },
   computed: {
@@ -73,7 +78,26 @@ export default {
       return store.state.control;
     }
   },
-  mounted() {}
+  mounted() {},
+  methods: {
+    onSubmitUniqueIdea: function() {
+      store.state.control.composer = false;
+      store.state.control.project = true;
+      this.step=1;
+      // eslint-disable-next-line no-console
+      console.log(this.newIdea)
+      // eslint-disable-next-line no-console
+      console.log(store.state.ideas)
+      store.state.ideas.push({
+        title: this.newIdea.title,
+        description: this.newIdea.description,
+        author: this.newIdea.author,
+        id: Math.max.apply(Math, store.state.ideas.map(i => i.id)) + 1,
+        postTime: Date.now(),
+        comments: []
+      })
+    }
+  }
 };
 </script>
 
