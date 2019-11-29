@@ -2,7 +2,7 @@
   <div>
     <div class="right">
       <a-input-group class="input" compact>
-        <a-input class="box" size="large" placeholder="enter your key words" />
+        <a-input class="box" v-model="searchQuery" size="large" placeholder="enter your key words" />
         <!-- <a-select
           class="box"
           mode="multiple"
@@ -25,11 +25,8 @@
       <a-layout-content :style="{ padding: '0 0px', margin: '0px' }">
         <!-- cards start -->
         <a-row style="margin-bottom: 100px">
-          <a-col :span="8" v-for="(idea, id) in search" :key="id">
-            <a-card :title="idea.title" class="card" @click="control.project = true" hoverable>
-              <icon type="star" slot="extra" @click.stop="onSave"></icon>
-              <p class="cardContent">{{idea.description}}</p>
-            </a-card>
+          <a-col :span="8" v-for="(idea, id) in ideas" :key="id">
+            <idea-card v-bind:idea="idea"></idea-card>
           </a-col>
         </a-row>
         <!-- cards end -->
@@ -40,10 +37,12 @@
 
 <script>
 import store from "../store";
+import IdeaCard from "./IdeaCard";
 
 export default {
+  components: {IdeaCard},
   data: function() {
-    return {};
+    return {searchQuery: ''};
   },
   computed: {
     control() {
@@ -51,16 +50,13 @@ export default {
     },
     search() {
       return store.state.search;
+    },
+    ideas() {
+        const query = this.searchQuery.toLowerCase();
+        return store.state.ideas.filter(idea => idea.title.toLowerCase().includes(query));
     }
   },
   mounted() {},
-  methods: {
-    onSave: function() {
-      // eslint-disable-next-line no-console
-      console.log("A save event is triggered!");
-      // We don't want to show card if save on the search page.
-    }
-  }
 };
 </script>
 
@@ -94,29 +90,11 @@ export default {
   border-right: 1px solid #e8e8e8;
 }
 
-.card {
-  width: 90%;
-  margin: 5%;
-}
-
 .input {
   float: left;
   margin-top: 20px;
   margin-left: 5%;
   width: 90%;
-}
-
-.card .cardContent {
-  overflow: hidden;
-  width: calc(100% - 0px);
-  box-sizing: border-box;
-  white-space: pre-wrap;
-  display: -webkit-box;
-  word-break: break-all;
-  text-overflow: ellipsis;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 3;
-  height: 60px;
 }
 
 .box {
