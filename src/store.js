@@ -14,7 +14,8 @@ const store = new Vuex.Store({
             register: false
         },
         ideas: ideas,
-        indexPageQuery: ''
+        indexPageQuery: '',
+        currentViewingProject: {}
     }
 })
 
