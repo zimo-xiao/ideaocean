@@ -42,7 +42,7 @@ import IdeaCard from "./IdeaCard";
 export default {
   components: {IdeaCard},
   data: function() {
-    return {searchQuery: ''};
+    return {searchQuery: store.state.indexPageQuery};
   },
   computed: {
     control() {

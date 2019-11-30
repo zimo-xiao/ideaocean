@@ -4,7 +4,6 @@ import Vue from 'vue'
 Vue.use(Vuex)
 
 import ideas from './ideas'
-import search from './search'
 
 const store = new Vuex.Store({
     state: {
@@ -15,7 +14,7 @@ const store = new Vuex.Store({
             register: false
         },
         ideas: ideas,
-        search: search
+        indexPageQuery: ''
     }
 })
 

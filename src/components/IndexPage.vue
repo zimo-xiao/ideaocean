@@ -8,16 +8,15 @@
         <p class="title">Idea Ocean</p>
         <p class="description">The Place for Project Prompts</p>
         <div class="functionBar shadow">
-          <a href="/#/search">
             <a-input-search
               placeholder="what do you want to search?"
               @search="onSearch"
+              v-model="indexPageQuery"
               enterButton="Search"
               size="large"
               class="search"
               :style="{ position: 'relative', top: '0px', left: '0px', marginTop: '25px', marginBottom: '25px', marginLeft: '3%', width: '76%' }"
             />
-          </a>
           <a-button
             type="primary"
             size="large"
@@ -57,7 +56,8 @@ import store from "../store";
 export default {
   data: function() {
     return {
-      primaryElemHeight: "700px"
+      primaryElemHeight: "700px",
+      indexPageQuery: ''
     };
   },
   computed: {
@@ -68,7 +68,13 @@ export default {
       return store.state.ideas;
     }
   },
-  mounted() {}
+  mounted() {},
+  methods: {
+    onSearch: function() {
+      store.state.indexPageQuery = this.indexPageQuery;
+      this.$router.push("search")
+    }
+  }
 };
 </script>
 

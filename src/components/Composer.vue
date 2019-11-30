@@ -84,10 +84,6 @@ export default {
       store.state.control.composer = false;
       store.state.control.project = true;
       this.step=1;
-      // eslint-disable-next-line no-console
-      console.log(this.newIdea)
-      // eslint-disable-next-line no-console
-      console.log(store.state.ideas)
       store.state.ideas.push({
         title: this.newIdea.title,
         description: this.newIdea.description,
