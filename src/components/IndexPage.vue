@@ -39,10 +39,7 @@
       <!-- cards start -->
       <a-row style="margin-bottom: 100px">
         <a-col :span="6" v-for="(idea, id) in ideas" :key="id">
-          <a-card :title="idea.title" class="card" @click="control.project = true">
-            <a slot="extra">view</a>
-            <p class="cardContent">{{idea.description}}</p>
-          </a-card>
+            <idea-card v-bind:idea="idea"></idea-card>
         </a-col>
       </a-row>
       <!-- cards end -->
@@ -52,8 +49,10 @@
 
 <script>
 import store from "../store";
+import IdeaCard from "./IdeaCard";
 
 export default {
+  components: {IdeaCard},
   data: function() {
     return {
       primaryElemHeight: "700px",

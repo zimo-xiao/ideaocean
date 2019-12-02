@@ -5,7 +5,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Boom Goes The Phone",
         "description": "An app that makes a loud, disruptive noise whenever the user goes beyond his/her notification screen on his/her phone",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 2,
@@ -13,7 +16,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Uber But with Carpool",
         "description": "Carpool app for relatively long distances (such as from Urbana to the suburbs of Chicago) that will help users connect to find a cheaper and eco-friendly alternative to buses ",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 3,
@@ -21,7 +27,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "A play that the audience directs",
         "description": "A play that is meant to be tragic but has a few key points that allow the audience to give direction to the play which can make it comedic",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 4,
@@ -29,7 +38,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Audience Directs the Performers",
         "description": "A play that is meant to be tragic but has a few key points that allow the audience to give direction to the play which can make it comedic",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 5,
@@ -37,7 +49,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Neighborhood Power Up",
         "description": "An app for sharing/renting hand tools or power tools so you don\"t have to keep borrowing from your nextdoor neightbors",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 6,
@@ -45,7 +60,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Back to Kindergarten",
         "description": "An app for sharing video game CDs and disks and potentially finding people to play co-op games with",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 7,
@@ -53,7 +71,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Super Ebay Mobile",
         "description": "An app for selling used things",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 8,
@@ -61,7 +82,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Fly Your Cares Away",
         "description": "An app to store flight itineraries and specific trip information such as hotels and rental cars. Now the user will know when his/her flight leaves and how much before his/her flight he/she should leave depending on his/her distance from the airport",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 9,
@@ -69,7 +93,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Weather the Weather with the Right Sweather",
         "description": "An app that gives clothing recommendations from the user\"s closet depending on weather and style preference too",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 10,
@@ -77,7 +104,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Pickup Sports",
         "description": "A street sport game pick up app that helps users create pickup games and/or find games nearby for casual play",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 11,
@@ -85,7 +115,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Coupon Coupoff",
         "description": "An app that organizes coupons and suggests what to buy next and where to but it based on which coupon expires first and where the best deals are",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 12,
@@ -93,7 +126,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "I have no idea what to buy at this Restaurant",
         "description": "Recommendations/ratings app for items on a menu at coffee shops and restaurants. THis could include recommendations for specific dishes across different restaurants",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 13,
@@ -101,7 +137,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Coupon Coupoff",
         "description": "An app that organizes coupons and suggests what to buy next and where to but it based on which coupon expires first and where the best deals are",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 14,
@@ -109,7 +148,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Mega Venmo",
         "description": "Venmo that allows sharing costs of many items across multiple people",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 15,
@@ -117,7 +159,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "All My Money All in One Place",
         "description": "An app that allows users to see all their bank accounts in the same place",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 16,
@@ -125,7 +170,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Instant Noodles",
         "description": "A recipe app that has recipes exclusively based on instant noodles so college students will branch out in what they eat",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 17,
@@ -133,7 +181,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Bar-going Information",
         "description": "An app that shows the length of line, when the bars are the busiest, and different specials.",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 18,
@@ -141,7 +192,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "How much have I had to drink",
         "description": "An app that tracks how much and what a user has drunk specifically for alcoholic drinks.",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 19,
@@ -149,7 +203,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Staying up to Sanitary Codes",
         "description": "An app to help users keep track of their chores and responsibilties and be reminded when a chore is due to be done",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 20,
@@ -157,7 +214,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Apart-meant to Be",
         "description": "An app that helps track potential places to live and organizes based on the user\"s preference",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 21,
@@ -165,7 +225,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Alarm Clock with Puzzles",
         "description": "An app that requires the user to solve a puzzle to turn it off or to silence it.",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 22,
@@ -173,7 +236,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Homework and Midterm Reminders",
         "description": "An app that helps students track different deadlines in classes and helps them prioritize based on how well they are currently doing in a class",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 23,
@@ -181,7 +247,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Automatic Pictures Finder",
         "description": "Ever looked for pictures for different project and spent hours trying to find the perfect one? Presenting an app that automatically suggests pictures depending on what you\"ve written",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 24,
@@ -189,7 +258,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "De-beautify",
         "description": "An app that takes photoshopped pictures and reveals what the picture looked like before the photoshop and also takes makeup off.",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 25,
@@ -197,7 +269,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Financial Planner",
         "description": "An app that helps you plan for the short and long term. Maybe it can even help you figure out 401K and investing without taking all your money to do it.",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 26,
@@ -205,7 +280,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Campus Menu Map",
         "description": "An app that tells you where to find food all over campus and adjusts given the user\"s preferences",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 27,
@@ -213,7 +291,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Where is my parking spot",
         "description": "I am tired of getting to campus and finding that all the parking spots are open. I also do not like paying for parking spots. If there could be an app that tracks what spots are open and which ones you have to pay for and when you don\"t have to pay for them anymore",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 28,
@@ -221,7 +302,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Not a one-man team",
         "description": "Team Delegation App (meeting schedulers, deliverables)",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 29,
@@ -229,7 +313,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Hair to get a here-cut",
         "description": "Barber Shop Tracker thing? Finding barber shops around time with the different rates",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 30,
@@ -237,7 +324,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Carpooling = Car cool",
         "description": "An extension to messaging apps that allows groups to plan carpooling for separate events",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 31,
@@ -245,7 +335,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Save Big Money when you share your textbooks",
         "description": "An app where students can share textbooks and hopefully save money",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 32,
@@ -253,7 +346,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "How would this outfit look on me",
         "description": "An app that shows you how you might look with an outfit on without having to move a muscle",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 33,
@@ -261,7 +357,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Random Songstarter Generator",
         "description": "An app that gives a group of notes and theme to help generate song ideas",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 34,
@@ -269,7 +368,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Poke poke do your work",
         "description": "Write now or I\"ll punch you in the face bot/app",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 35,
@@ -277,7 +379,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Community Resource Pools",
         "description": "A community app that helps everyone know what is availble for use. If Joe has a handsaw, then maybe I can borrow it instead of going somewhere to buy one",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 36,
@@ -285,7 +390,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Rumormonger",
         "description": "like overheard at UIUC but with a search function. It would need a lot of filtration",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 37,
@@ -293,7 +401,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Good International Food",
         "description": "An app where people who have familiarity with that food can judge restaurants",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 38,
@@ -301,7 +412,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Community DVDs",
         "description": "Community Libraries, but with DVDs",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 39,
@@ -309,7 +423,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Garage Sale Tracker",
         "description": "A way for people to see where garage sales are and what is there. A better way to advertise your garage sales",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 40,
@@ -317,7 +434,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Toast me",
         "description": "Rate my Hairstyle / Rate my look (Positive Version of Roast me)",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 41,
@@ -325,7 +445,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Park Maintenance",
         "description": "Public Park Maintenance, crowd sourcing maintenance",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 42,
@@ -333,7 +456,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Birthday Bonus App",
         "description": "An app that tells you where you can get birthday bonuses around town",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 43,
@@ -341,7 +467,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Help, I need a charger",
         "description": "Let people know if you need a charger",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 44,
@@ -349,7 +478,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "What\"s up on campus",
         "description": "A concise calendar of campus community gatherings",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 45,
@@ -357,7 +489,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Fill my bottle",
         "description": "Water Fountain / Bottle filler Finder app",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 46,
@@ -365,7 +500,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Apartment Mover",
         "description": "Connect people moving with thrift stores so that there is less waste.",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 47,
@@ -373,7 +511,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Daily Affirmation",
         "description": "An app that says nice things to you and is tuned to what you are experiencing ",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 48,
@@ -381,7 +522,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Compliment Exchange",
         "description": "Exchange compliments with a stranger",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 49,
@@ -389,7 +533,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Famous Quote Finder",
         "description": "Input text for a website or paper and the app suggests good quotes to go along with it. Or you can open it in the middle of a conversation and look smart... or unintelligent, depending on your viewpoint.",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 50,
@@ -397,7 +544,10 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Lost and Found",
         "description": "An app that brings those who\"ve lost things into contact with those who find things",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     },
     {
         "id": 51,
@@ -405,6 +555,9 @@ export default [
         "author": "Cornfield Warriors",
         "title": "A story about a Fairy in modern day Illinois",
         "description": "Maybe the fairy goes to college? What would it look like to have magic in the middle of all our interactions?",
-        "comments": []
+        "comments": [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 200
     }
 ]

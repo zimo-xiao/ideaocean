@@ -14,15 +14,15 @@
         <a-row>
           <a-col :span="2">
             <!--Hard margin override here because we want the up and down vote to look closer to the number-->
-            <a-button class="vote" type="default" shape="circle" icon="up" style="margin-bottom: 3px"></a-button>
-            <a-button class="voteCount" type="link">200</a-button>
-            <a-button class="vote" type="primary" shape="circle" icon="down" style="margin-top: 3px;"></a-button>
+            <a-button :type="project.upvoted? 'primary' : 'default'" @click="upvote" class="vote" shape="circle" icon="up" style="margin-bottom: 3px"></a-button>
+            <a-button class="voteCount" type="link">{{project.votes}}</a-button>
+            <a-button :type="project.downvoted? 'primary' : 'default'" @click="downvote" class="vote" shape="circle" icon="down" style="margin-top: 3px;"></a-button>
             <a-button class="vote" type="default" shape="circle" icon="pushpin"></a-button>
           </a-col>
           <a-col :span="22">
             <div style="description">
               <img src="../assets/user-img.png" class="authorImg" />
-              <p class="author">{{project.author}}, created at {{project.postTime}}</p>
+              <p class="author">{{project.author}}, created on {{projectTime}}</p>
             </div>
             <p class="description" style="word-break: keep-all">
                 {{project.description}}
@@ -63,9 +63,36 @@ export default {
     },
     project() {
       return store.state.currentViewingProject;
+    },
+    projectTime() {
+      return new Date(store.state.currentViewingProject.postTime).toDateString()
     }
   },
-  mounted() {}
+  mounted() {},
+  methods : {
+    upvote: function () {
+      // if not already upvoted, upvote and add 1
+      if (!store.state.currentViewingProject.upvoted) {
+        store.state.currentViewingProject.upvoted = true;
+        store.state.currentViewingProject.votes += 1;
+      }
+      // if downvoted, this cancels the downvote, which add 1
+      if (store.state.currentViewingProject.downvoted) {
+        store.state.currentViewingProject.downvoted = false;
+        store.state.currentViewingProject.votes += 1;
+      }
+    },
+    downvote: function () {
+      if (!store.state.currentViewingProject.downvoted) {
+        store.state.currentViewingProject.downvoted = true;
+        store.state.currentViewingProject.votes -= 1;
+      }
+      if (store.state.currentViewingProject.upvoted) {
+        store.state.currentViewingProject.upvoted = false;
+        store.state.currentViewingProject.votes -= 1;
+      }
+    }
+  }
 };
 </script>
 
