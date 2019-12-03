@@ -34,14 +34,13 @@
 
       <!-- comment start -->
       <div class="container commentSection" style="margin-top:20px;margin-bottom:50px;">
-        <a-textarea placeholder="Description" :rows="4" />
+        <a-textarea  v-model="commentInput" placeholder="Description" :rows="4" />
         <div style="float:left;width:100%">
-          <a-button style="float:right;margin-top:20px" type="primary">Add Comment</a-button>
+          <a-button style="float:right;margin-top:20px" type="primary" @click="onComment">Add Comment</a-button>
         </div>
-        <a-card title="Zimo Xiao" class="commentCard">
-          <p>card content</p>
-          <p>card content</p>
-          <p>card content</p>
+
+        <a-card v-for="(comment, id) in project.comments" :title="comment.author" class="commentCard" :key="id">
+          <p>{{comment.content}}</p>
           <a-button class="vote" type="default" shape="circle" icon="like"></a-button>
         </a-card>
       </div>
@@ -55,7 +54,7 @@ import store from "../store";
 
 export default {
   data: function() {
-    return {};
+    return {commentInput: ''};
   },
   computed: {
     control() {
@@ -91,6 +90,10 @@ export default {
         store.state.currentViewingProject.upvoted = false;
         store.state.currentViewingProject.votes -= 1;
       }
+    },
+    onComment: function () {
+      // TODO remove hardcoded author
+      store.state.currentViewingProject.comments.push({author: 'Cornfield Warriors', content: this.commentInput})
     }
   }
 };

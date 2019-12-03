@@ -5,7 +5,12 @@ export default [
         "author": "Cornfield Warriors",
         "title": "Boom Goes The Phone",
         "description": "An app that makes a loud, disruptive noise whenever the user goes beyond his/her notification screen on his/her phone",
-        "comments": [],
+        "comments": [
+            {
+                "author" : "Bobby",
+                "content" : "Great idea!"
+            }
+        ],
         "upvoted": false,
         "downvoted": false,
         "votes" : 200
