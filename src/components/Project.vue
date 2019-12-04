@@ -23,7 +23,7 @@
               style="margin-bottom: 3px"
             ></a-button>
             <a-button class="voteCount" type="link">{{project.votes}}</a-button>
-            <a-button class="vote" type="default" shape="circle" icon="pushpin"></a-button>
+            <a-button class="vote" type="default" shape="circle" icon="star"></a-button>
           </a-col>
           <a-col :span="22">
             <div style="description">
