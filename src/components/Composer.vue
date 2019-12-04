@@ -78,8 +78,15 @@ export default {
   mounted() {},
   methods: {
     onSubmitUniqueIdea: function() {
-      store.state.control.composer = false;
-      store.state.control.project = true;
+      if (
+        this.newIdea.title == "" ||
+        this.newIdea.description == "" ||
+        this.newIdea.author == ""
+      ) {
+        this.$message.info("Please fill out all the entries");
+        return;
+      }
+
       this.step = 1;
       const newidea = {
         title: this.newIdea.title,
@@ -88,12 +95,14 @@ export default {
         id: Math.max.apply(Math, store.state.ideas.map(i => i.id)) + 1,
         postTime: Date.now(),
         comments: [],
-        "upvoted": false,
-        "downvoted": false,
-        "votes" : 0
+        upvoted: false,
+        downvoted: false,
+        votes: 0
       };
       store.state.ideas.push(newidea);
       store.state.currentViewingProject = newidea;
+      store.state.control.composer = false;
+      store.state.control.project = true;
     }
   }
 };
