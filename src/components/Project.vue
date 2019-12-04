@@ -38,7 +38,7 @@
 
       <!-- comment start -->
       <div class="container commentSection" style="margin-top:20px;margin-bottom:50px;">
-        <a-textarea v-model="commentInput" placeholder="Description" :rows="4" />
+        <a-textarea v-model="commentInput" placeholder="Comment..." :rows="4" />
         <div style="float:left;width:100%">
           <a-button
             style="float:right;margin-top:20px"
