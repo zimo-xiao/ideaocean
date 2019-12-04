@@ -81,14 +81,16 @@ export default {
       store.state.control.composer = false;
       store.state.control.project = true;
       this.step = 1;
-      store.state.ideas.push({
+      const newidea = {
         title: this.newIdea.title,
         description: this.newIdea.description,
         author: this.newIdea.author,
         id: Math.max.apply(Math, store.state.ideas.map(i => i.id)) + 1,
         postTime: Date.now(),
         comments: []
-      });
+      };
+      store.state.ideas.push(newidea);
+      store.state.currentViewingProject = newidea;
     }
   }
 };
