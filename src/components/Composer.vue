@@ -87,7 +87,10 @@ export default {
         author: this.newIdea.author,
         id: Math.max.apply(Math, store.state.ideas.map(i => i.id)) + 1,
         postTime: Date.now(),
-        comments: []
+        comments: [],
+        "upvoted": false,
+        "downvoted": false,
+        "votes" : 0
       };
       store.state.ideas.push(newidea);
       store.state.currentViewingProject = newidea;
