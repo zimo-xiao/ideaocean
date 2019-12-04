@@ -27,7 +27,7 @@
             <a-icon type="plus" />Add Idea
           </a-button>
         </div>
-        <p class="guide bounce">
+        <p class="guide bounce" style="color: #384656" v-scroll-to="'#cardSpace'">
           dive right in
           <br />
           <a-icon type="down" />
@@ -37,7 +37,7 @@
     <a-layout-content :style="{ padding: '0 0px', margin: '0px' }">
       <div :style="{ width: '100%', height: primaryElemHeight}"></div>
       <!-- cards start -->
-      <a-row style="margin-bottom: 100px">
+      <a-row style="margin-bottom: 100px" id="cardSpace">
         <a-col :span="6" v-for="(idea, id) in ideas" :key="id">
           <idea-card v-bind:idea="idea"></idea-card>
         </a-col>
