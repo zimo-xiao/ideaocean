@@ -20,7 +20,7 @@
       </a-input-group>
     </div>
     <div class="left">
-      <p class="title">Ideas similar to Community</p>
+      <p class="title">Ideas similar to "{{searchQuery}}"</p>
 
       <a-layout-content :style="{ padding: '0 0px', margin: '0px' }">
         <!-- cards start -->
@@ -40,9 +40,9 @@ import store from "../store";
 import IdeaCard from "./IdeaCard";
 
 export default {
-  components: {IdeaCard},
+  components: { IdeaCard },
   data: function() {
-    return {searchQuery: store.state.indexPageQuery};
+    return { searchQuery: store.state.indexPageQuery };
   },
   computed: {
     control() {
@@ -52,11 +52,16 @@ export default {
       return store.state.search;
     },
     ideas() {
-        const query = this.searchQuery.toLowerCase();
-        return store.state.ideas.filter(idea => idea.title.toLowerCase().includes(query));
+      const query = this.searchQuery.toLowerCase();
+      return store.state.ideas.filter(idea => {
+        return (
+          idea.title.toLowerCase().includes(query) ||
+          idea.description.toLowerCase().includes(query)
+        );
+      });
     }
   },
-  mounted() {},
+  mounted() {}
 };
 </script>
 

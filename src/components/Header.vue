@@ -18,12 +18,7 @@
       <a-menu-item key="2">nav 3</a-menu-item>
     </a-menu>-->
 
-    <a-button
-      @click="control.register = true"
-      type="primary"
-      class="menuButton"
-      size="large"
-    >Welcome, Cornfield Warrior</a-button>
+    <a-button type="primary" class="menuButton" size="large">Welcome, Cornfield Warrior</a-button>
 
     <!-- <a-button
       @click="control.register = true"

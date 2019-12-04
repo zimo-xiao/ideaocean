@@ -70,7 +70,7 @@ export default {
 }
 
 p {
-  word-break: break-all;
+  word-break: normal;
 }
 
 .floatWindow {

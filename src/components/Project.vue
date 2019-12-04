@@ -14,9 +14,23 @@
         <a-row>
           <a-col :span="2">
             <!--Hard margin override here because we want the up and down vote to look closer to the number-->
-            <a-button :type="project.upvoted? 'primary' : 'default'" @click="upvote" class="vote" shape="circle" icon="up" style="margin-bottom: 3px"></a-button>
+            <a-button
+              :type="project.upvoted? 'primary' : 'default'"
+              @click="upvote"
+              class="vote"
+              shape="circle"
+              icon="up"
+              style="margin-bottom: 3px"
+            ></a-button>
             <a-button class="voteCount" type="link">{{project.votes}}</a-button>
-            <a-button :type="project.downvoted? 'primary' : 'default'" @click="downvote" class="vote" shape="circle" icon="down" style="margin-top: 3px;"></a-button>
+            <a-button
+              :type="project.downvoted? 'primary' : 'default'"
+              @click="downvote"
+              class="vote"
+              shape="circle"
+              icon="down"
+              style="margin-top: 3px;"
+            ></a-button>
             <a-button class="vote" type="default" shape="circle" icon="pushpin"></a-button>
           </a-col>
           <a-col :span="22">
@@ -24,9 +38,7 @@
               <img src="../assets/user-img.png" class="authorImg" />
               <p class="author">{{project.author}}, created on {{projectTime}}</p>
             </div>
-            <p class="description" style="word-break: keep-all">
-                {{project.description}}
-            </p>
+            <p class="description" style="word-break: normal">{{project.description}}</p>
           </a-col>
         </a-row>
       </div>
@@ -34,14 +46,23 @@
 
       <!-- comment start -->
       <div class="container commentSection" style="margin-top:20px;margin-bottom:50px;">
-        <a-textarea  v-model="commentInput" placeholder="Description" :rows="4" />
+        <a-textarea v-model="commentInput" placeholder="Description" :rows="4" />
         <div style="float:left;width:100%">
-          <a-button style="float:right;margin-top:20px" type="primary" @click="onComment">Add Comment</a-button>
+          <a-button
+            style="float:right;margin-top:20px"
+            type="primary"
+            @click="onComment"
+          >Add Comment</a-button>
         </div>
 
-        <a-card v-for="(comment, id) in project.comments" :title="comment.author" class="commentCard" :key="id">
+        <a-card
+          v-for="(comment, id) in project.comments"
+          :title="comment.author"
+          class="commentCard"
+          :key="id"
+        >
           <p>{{comment.content}}</p>
-          <a-button class="vote" type="default" shape="circle" icon="like"></a-button>
+          <!-- <a-button class="vote" type="default" shape="circle" icon="like"></a-button> -->
         </a-card>
       </div>
       <!-- comment end -->
@@ -54,7 +75,7 @@ import store from "../store";
 
 export default {
   data: function() {
-    return {commentInput: ''};
+    return { commentInput: "" };
   },
   computed: {
     control() {
@@ -64,12 +85,14 @@ export default {
       return store.state.currentViewingProject;
     },
     projectTime() {
-      return new Date(store.state.currentViewingProject.postTime).toDateString()
+      return new Date(
+        store.state.currentViewingProject.postTime
+      ).toDateString();
     }
   },
   mounted() {},
-  methods : {
-    upvote: function () {
+  methods: {
+    upvote: function() {
       // if not already upvoted, upvote and add 1
       if (!store.state.currentViewingProject.upvoted) {
         store.state.currentViewingProject.upvoted = true;
@@ -81,7 +104,7 @@ export default {
         store.state.currentViewingProject.votes += 1;
       }
     },
-    downvote: function () {
+    downvote: function() {
       if (!store.state.currentViewingProject.downvoted) {
         store.state.currentViewingProject.downvoted = true;
         store.state.currentViewingProject.votes -= 1;
@@ -91,9 +114,14 @@ export default {
         store.state.currentViewingProject.votes -= 1;
       }
     },
-    onComment: function () {
+    onComment: function() {
       // TODO remove hardcoded author
-      store.state.currentViewingProject.comments.push({author: 'Cornfield Warriors', content: this.commentInput})
+      store.state.currentViewingProject.comments.push({
+        author: "Cornfield Warriors",
+        content: this.commentInput
+      });
+
+      store.state.currentViewingProject.comments = store.state.currentViewingProject.comments.reverse();
     }
   }
 };

@@ -8,15 +8,15 @@
         <p class="title">Idea Ocean</p>
         <p class="description">The Place for Project Prompts</p>
         <div class="functionBar shadow">
-            <a-input-search
-              placeholder="what do you want to search?"
-              @search="onSearch"
-              v-model="indexPageQuery"
-              enterButton="Search"
-              size="large"
-              class="search"
-              :style="{ position: 'relative', top: '0px', left: '0px', marginTop: '25px', marginBottom: '25px', marginLeft: '3%', width: '76%' }"
-            />
+          <a-input-search
+            placeholder="what do you want to search?"
+            @search="onSearch"
+            v-model="indexPageQuery"
+            enterButton="Search"
+            size="large"
+            class="search"
+            :style="{ position: 'relative', top: '0px', left: '0px', marginTop: '25px', marginBottom: '25px', marginLeft: '3%', width: '76%' }"
+          />
           <a-button
             type="primary"
             size="large"
@@ -39,7 +39,7 @@
       <!-- cards start -->
       <a-row style="margin-bottom: 100px">
         <a-col :span="6" v-for="(idea, id) in ideas" :key="id">
-            <idea-card v-bind:idea="idea"></idea-card>
+          <idea-card v-bind:idea="idea"></idea-card>
         </a-col>
       </a-row>
       <!-- cards end -->
@@ -52,11 +52,11 @@ import store from "../store";
 import IdeaCard from "./IdeaCard";
 
 export default {
-  components: {IdeaCard},
+  components: { IdeaCard },
   data: function() {
     return {
       primaryElemHeight: "700px",
-      indexPageQuery: ''
+      indexPageQuery: ""
     };
   },
   computed: {
@@ -71,7 +71,7 @@ export default {
   methods: {
     onSearch: function() {
       store.state.indexPageQuery = this.indexPageQuery;
-      this.$router.push("search")
+      this.$router.push("search");
     }
   }
 };
@@ -151,7 +151,7 @@ export default {
   box-sizing: border-box;
   white-space: pre-wrap;
   display: -webkit-box;
-  word-break: break-all;
+  word-break: normal;
   text-overflow: ellipsis;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
