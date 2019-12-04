@@ -19,18 +19,10 @@
               @click="upvote"
               class="vote"
               shape="circle"
-              icon="up"
+              icon="like"
               style="margin-bottom: 3px"
             ></a-button>
             <a-button class="voteCount" type="link">{{project.votes}}</a-button>
-            <a-button
-              :type="project.downvoted? 'primary' : 'default'"
-              @click="downvote"
-              class="vote"
-              shape="circle"
-              icon="down"
-              style="margin-top: 3px;"
-            ></a-button>
             <a-button class="vote" type="default" shape="circle" icon="pushpin"></a-button>
           </a-col>
           <a-col :span="22">
@@ -97,11 +89,9 @@ export default {
       if (!store.state.currentViewingProject.upvoted) {
         store.state.currentViewingProject.upvoted = true;
         store.state.currentViewingProject.votes += 1;
-      }
-      // if downvoted, this cancels the downvote, which add 1
-      if (store.state.currentViewingProject.downvoted) {
-        store.state.currentViewingProject.downvoted = false;
-        store.state.currentViewingProject.votes += 1;
+      } else {
+        store.state.currentViewingProject.upvoted = false;
+        store.state.currentViewingProject.votes -= 1;
       }
     },
     downvote: function() {
@@ -122,6 +112,7 @@ export default {
       });
 
       store.state.currentViewingProject.comments = store.state.currentViewingProject.comments.reverse();
+      this.commentInput = "";
     }
   }
 };

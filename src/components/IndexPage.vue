@@ -27,7 +27,7 @@
             <a-icon type="plus" />Add Idea
           </a-button>
         </div>
-        <p class="guide">
+        <p class="guide bounce">
           dive right in
           <br />
           <a-icon type="down" />

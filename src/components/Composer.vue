@@ -13,18 +13,19 @@
       <div class="container" v-if="step == 1" style="margin-top: -40px">
         <a-input class="input" size="large" v-model="newIdea.title" placeholder="Title" />
 
-        <a-textarea class="input" v-model="newIdea.description" placeholder="Description" :rows="4" />
+        <a-textarea
+          class="input"
+          v-model="newIdea.description"
+          placeholder="Description"
+          :rows="4"
+        />
 
         <a-input-group class="input" compact>
-          <!-- <a-select defaultValue="Option1-1">
-            <a-select-option value="Option1-1">Category-1</a-select-option>
-            <a-select-option value="Option1-2">Category-2</a-select-option>
-          </a-select>-->
-          <a-select v-model="newIdea.author" defaultValue="Option2-2">
-            <a-select-option value="Option2-1">Post As Cornfield Warrior</a-select-option>
-            <a-select-option value="Option2-2">Post As Anonymous</a-select-option>
+          <a-select defaultValue="Cornfield Warrior" v-model="newIdea.author">
+            <a-select-option value="Cornfield Warrior">Post As Cornfield Warrior</a-select-option>
+            <a-select-option value="Anonymous">Post As Anonymous</a-select-option>
           </a-select>
-          <a-button style="float:right" type="primary" @click="step = 2">Next Step</a-button>
+          <a-button style="float:right" type="primary" @click="onSubmitUniqueIdea">Submit Idea</a-button>
         </a-input-group>
       </div>
       <!-- input end -->
@@ -42,16 +43,12 @@
           </a>
         </div>
         <div class="input" style="width:100%;margin-bottom:30px;">
-          <a-button
-            style="float:right"
-            type="primary"
-            @click="onSubmitUniqueIdea"
-          >Submit Unique Idea</a-button>
+          <a-button style="float:right" type="primary" @click="onSubmitUniqueIdea">Submit Idea</a-button>
           <a-button
             style="float:right;margin-right:10px;"
             type="default"
             @click="step = 1"
-          >Last Step</a-button>
+          >Previous Step</a-button>
         </div>
       </div>
       <!-- similar idea end -->
@@ -66,10 +63,10 @@ export default {
   data: function() {
     return {
       step: 1,
-      newIdea : {
-        title : '',
-        description: '',
-        author : ''
+      newIdea: {
+        title: "",
+        description: "",
+        author: "Cornfield Warrior"
       }
     };
   },
@@ -83,7 +80,7 @@ export default {
     onSubmitUniqueIdea: function() {
       store.state.control.composer = false;
       store.state.control.project = true;
-      this.step=1;
+      this.step = 1;
       store.state.ideas.push({
         title: this.newIdea.title,
         description: this.newIdea.description,
@@ -91,7 +88,7 @@ export default {
         id: Math.max.apply(Math, store.state.ideas.map(i => i.id)) + 1,
         postTime: Date.now(),
         comments: []
-      })
+      });
     }
   }
 };
