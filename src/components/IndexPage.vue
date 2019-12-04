@@ -136,7 +136,6 @@ export default {
   position: relative;
   text-align: center;
   margin: 0px;
-  color: white;
   font-family: "IdeaFont";
 }
 
