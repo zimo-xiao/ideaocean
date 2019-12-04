@@ -111,7 +111,6 @@ export default {
         content: this.commentInput
       });
 
-      store.state.currentViewingProject.comments = store.state.currentViewingProject.comments.reverse();
       this.commentInput = "";
     }
   }
