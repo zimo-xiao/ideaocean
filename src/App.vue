@@ -112,6 +112,12 @@ a-textarea {
   margin-left: 5%;
 }
 
+.bounce {
+  -webkit-animation: bounce 2s infinite;
+  -moz-animation: bounce 2s infinite;
+  -o-animation: bounce 2s infinite;
+}
+
 @-webkit-keyframes bounce {
   0%,
   20%,
@@ -121,13 +127,44 @@ a-textarea {
     -webkit-transform: translateY(0);
   }
   40% {
-    -webkit-transform: translateY(-30px);
+    -webkit-transform: translateY(-10px);
   }
   60% {
-    -webkit-transform: translateY(-15px);
+    -webkit-transform: translateY(-5px);
   }
 }
 
+@-moz-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -moz-transform: translateY(0);
+  }
+  40% {
+    -moz-transform: translateY(-10px);
+  }
+  60% {
+    -moz-transform: translateY(-5px);
+  }
+}
+
+@-o-keyframes bounce {
+  0%,
+  20%,
+  50%,
+  80%,
+  100% {
+    -o-transform: translateY(0);
+  }
+  40% {
+    -o-transform: translateY(-10px);
+  }
+  60% {
+    -o-transform: translateY(-5px);
+  }
+}
 @keyframes bounce {
   0%,
   20%,
@@ -137,15 +174,10 @@ a-textarea {
     transform: translateY(0);
   }
   40% {
-    transform: translateY(-30px);
+    transform: translateY(-10px);
   }
   60% {
-    transform: translateY(-15px);
+    transform: translateY(-5px);
   }
-}
-
-.bounce {
-  -webkit-animation-name: bounce;
-  animation-name: bounce;
 }
 </style>
