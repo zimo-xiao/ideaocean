@@ -6,7 +6,7 @@
         <p class="title" v-if="step == 1">Compose Idea</p>
         <p class="title" v-if="step == 2">Similar Ideas</p>
         <p class="close">
-          <a-icon type="close" @click="control.composer = false" />
+          <a-icon type="close" @click="onCloseComposer()" />
         </p>
       </div>
       <!-- input start -->
@@ -77,6 +77,17 @@ export default {
   },
   mounted() {},
   methods: {
+    onCloseComposer: function() {
+      var that = this;
+      this.$confirm({
+        title: "Do you want to leave?",
+        content: "Data might lost when you leave the compose page",
+        onOk() {
+          that.control.composer = false;
+        },
+        onCancel() {}
+      });
+    },
     onSubmitUniqueIdea: function() {
       if (
         this.newIdea.title == "" ||
