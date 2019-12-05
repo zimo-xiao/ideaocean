@@ -206,5 +206,7 @@ export default {
   float: left;
   margin-top: 20px;
   width: 100%;
+    border-width: 2px;
+    border-color: #bfbfbf;
 }
 </style>
