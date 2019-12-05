@@ -1,7 +1,7 @@
 <template>
   <div v-if="control.project">
     <div class="floatBackground" @click="control.project = false"></div>
-    <div class="floatWindow shadow">
+    <div class="floatWindow shadow" id="project_container">
       <div class="container">
         <p class="title">{{project.title}}</p>
         <p class="close">
@@ -47,6 +47,10 @@
             style="float:right;margin-top:20px"
             type="primary"
             @click="onComment"
+            v-scroll-to="{
+              el: '#project_bottom',
+              container: '#project_container'
+          }"
           >Add Comment</a-button>
         </div>
 
@@ -59,6 +63,8 @@
           <p>{{comment.content}}</p>
           <!-- <a-button class="vote" type="default" shape="circle" icon="like"></a-button> -->
         </a-card>
+
+        <div id="project_bottom" />
       </div>
       <!-- comment end -->
     </div>
@@ -108,6 +114,11 @@ export default {
       }
     },
     onComment: function() {
+      if (this.commentInput == "") {
+        this.$message.info("Please fill out all the entries");
+        return;
+      }
+
       // TODO remove hardcoded author
       store.state.currentViewingProject.comments.push({
         author: "Cornfield Warriors",
