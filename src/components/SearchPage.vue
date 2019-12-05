@@ -1,11 +1,11 @@
 <template>
   <div>
-<!--    <div class="top">-->
-<!--      <a-input-group class="input" compact>-->
-<!--        <a-input class="box" v-model="searchQuery" size="large" placeholder="enter your key words" />-->
-<!--        <a-button class="box" style="float:right" size="large" type="primary">Search</a-button>-->
-<!--      </a-input-group>-->
-<!--    </div>-->
+    <!--    <div class="top">-->
+    <!--      <a-input-group class="input" compact>-->
+    <!--        <a-input class="box" v-model="searchQuery" size="large" placeholder="enter your key words" />-->
+    <!--        <a-button class="box" style="float:right" size="large" type="primary">Search</a-button>-->
+    <!--      </a-input-group>-->
+    <!--    </div>-->
     <div class="bottom">
       <p class="title">Ideas similar to "{{searchQuery}}"</p>
 
@@ -25,7 +25,6 @@
 <script>
 import store from "../store";
 import IdeaCard from "./IdeaCard";
-
 
 export default {
   components: { IdeaCard },
@@ -81,7 +80,7 @@ export default {
 
 .bottom {
   top: 64px;
-  position: fixed;
+  position: relative;
 }
 
 .right {
