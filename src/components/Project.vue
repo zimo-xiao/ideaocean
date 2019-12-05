@@ -40,7 +40,7 @@
                     :theme="saved? 'filled' : 'outlined'"
                     v-bind:style="{color: starColor}"
                     />
-            Favourite
+            {{saved? 'Saved in cove' : 'Add to cove'}}
           </a-button>
         </a-col>
       </div>
