@@ -8,7 +8,8 @@ export default [
         "comments": [
             {
                 "author" : "Bobby",
-                "content" : "Great idea!"
+                "content" : "Great idea!",
+                "time" : "2012-04-23T18:25:43.511Z"
             }
         ],
         "upvoted": false,

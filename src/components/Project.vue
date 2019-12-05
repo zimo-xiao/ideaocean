@@ -67,6 +67,7 @@
           class="commentCard"
           :key="id"
         >
+          <p slot="extra">{{gettime(comment)}}</p>
           <p>{{comment.content}}</p>
           <!-- <a-button class="vote" type="default" shape="circle" icon="like"></a-button> -->
         </a-card>
@@ -93,9 +94,8 @@ export default {
       return store.state.currentViewingProject;
     },
     projectTime() {
-      return new Date(
-        store.state.currentViewingProject.postTime
-      ).toDateString();
+      const d = new Date(store.state.currentViewingProject.postTime);
+      return d.toLocaleDateString();
     },
     starColor () {
       return store.state.currentViewingProject.saved ? '#f4c74b' : '#000000';
@@ -105,8 +105,13 @@ export default {
     }
 
   },
-  mounted() {},
+  mounted() {
+  },
   methods: {
+    gettime: function(c) {
+      const d = new Date(c.time);
+      return d.toLocaleTimeString() + "  " + d.toLocaleDateString();
+    },
     upvote: function() {
       // if not already upvoted, upvote and add 1
       if (!store.state.currentViewingProject.upvoted) {
@@ -126,7 +131,8 @@ export default {
       // TODO remove hardcoded author
       store.state.currentViewingProject.comments.push({
         author: "Cornfield Warriors",
-        content: this.commentInput
+        content: this.commentInput,
+        time: Date.now()
       });
 
       this.commentInput = "";
@@ -189,15 +195,6 @@ export default {
   margin-right: 5px;
   height: 42px;
   margin-bottom: 10px;
-}
-
-.voteCount {
-  width: 42px;
-  height: 35px;
-  padding-left: 0px;
-  padding-right: 0px;
-  color: black;
-  font-size: large;
 }
 
 .commentSection {
