@@ -3,8 +3,8 @@ module.exports = {
         loaderOptions: {
             less: {
                 modifyVars: {
-                    'primary-color': '#97C9FA',
-                    'link-color': '#97C9FA',
+                    'primary-color': '#338FE5',
+                    'link-color': '#338FE5',
                     'border-radius-base': '2px',
                 },
                 javascriptEnabled: true

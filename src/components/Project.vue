@@ -12,20 +12,7 @@
       <!-- content start -->
       <div class="container">
         <a-row>
-          <a-col :span="2">
-            <!--Hard margin override here because we want the up and down vote to look closer to the number-->
-            <a-button
-              :type="project.upvoted? 'primary' : 'default'"
-              @click="upvote"
-              class="vote"
-              shape="circle"
-              icon="like"
-              style="margin-bottom: 3px"
-            ></a-button>
-            <a-button class="voteCount" type="link">{{project.votes}}</a-button>
-            <a-button class="vote" type="default" shape="circle" icon="star"></a-button>
-          </a-col>
-          <a-col :span="22">
+          <a-col :span="24">
             <div style="description">
               <img src="../assets/user-img.png" class="authorImg" />
               <p class="author">{{project.author}}, created on {{projectTime}}</p>
@@ -35,6 +22,22 @@
         </a-row>
       </div>
       <!-- content end -->
+
+      <!-- like & favourite start -->
+      <div class="container">
+        <a-col :span="22">
+          <!--Hard margin override here because we want the up and down vote to look closer to the number-->
+          <a-button
+            :type="project.upvoted? 'primary' : 'default'"
+            @click="upvote"
+            class="vote"
+            shape="round"
+            icon="like"
+          >{{project.votes}}</a-button>
+          <a-button class="vote" type="default" shape="round" icon="star">Favourite</a-button>
+        </a-col>
+      </div>
+      <!-- like and favourite end -->
 
       <!-- comment start -->
       <div class="container commentSection" style="margin-top:20px;margin-bottom:50px;">
@@ -165,7 +168,7 @@ export default {
   float: left;
   margin-top: 5px;
   margin-left: 0px;
-  width: 42px;
+  margin-right: 5px;
   height: 42px;
   margin-bottom: 10px;
 }

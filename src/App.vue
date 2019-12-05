@@ -80,7 +80,7 @@ p {
   width: 50%;
   height: 80%;
   background-color: white;
-  z-index: 1001;
+  z-index: 999;
   border-radius: 2px;
   overflow: scroll;
 }
@@ -100,7 +100,7 @@ a-textarea {
   width: 100%;
   height: 100%;
   background-color: black;
-  z-index: 1000;
+  z-index: 998;
   opacity: 0.4;
 }
 

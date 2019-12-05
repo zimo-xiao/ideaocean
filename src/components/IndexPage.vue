@@ -12,7 +12,7 @@
             placeholder="what do you want to search?"
             @search="onSearch"
             v-model="indexPageQuery"
-            enterButton="Search"
+            enterButton="Search an idea"
             size="large"
             class="search"
             :style="{ position: 'relative', top: '0px', left: '0px', marginTop: '25px', marginBottom: '25px', marginLeft: '3%', width: '76%' }"
