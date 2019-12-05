@@ -11,7 +11,7 @@
     </a>
 
     <div class="searchBoxContainer">
-      <a-input v-if="control.search" v-model="state.query" class="box searchbox" placeholder="Search the Ocean"></a-input>
+      <a-input-search v-if="control.search" v-model="state.query" class="box searchbox" placeholder="Search the Ocean"></a-input-search>
       <a-button type="primary" class="menuButton" size="large">Welcome, Cornfield Warrior</a-button>
     </div>
 
