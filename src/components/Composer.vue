@@ -111,7 +111,7 @@ export default {
         votes: 0,
         saved: true
       };
-      store.state.ideas.push(newidea);
+      store.state.ideas.unshift(newidea);
       store.state.currentViewingProject = newidea;
       store.state.control.composer = false;
       store.state.control.project = true;
