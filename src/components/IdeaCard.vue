@@ -4,7 +4,7 @@
             type="star"
             :theme="idea.saved? 'filled' : 'outlined'"
             slot="extra"
-            style="color:#f4c74b"
+            v-bind:style="{color: starColor}"
             @click.stop="onSave">
     </icon>
     <p class="cardContent">{{idea.description}}</p>
@@ -20,6 +20,9 @@ export default {
   computed: {
     control() {
       return store.state.control;
+    },
+    starColor () {
+      return this.idea.saved ? '#f4c74b' : '#000000';
     }
   },
   methods: {
