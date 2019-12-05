@@ -1,25 +1,12 @@
 <template>
   <div>
-    <div class="right">
-      <a-input-group class="input" compact>
-        <a-input class="box" v-model="searchQuery" size="large" placeholder="enter your key words" />
-        <!-- <a-select
-          class="box"
-          mode="multiple"
-          :defaultValue="[]"
-          style="width: 100%"
-          size="large"
-          placeholder="Select a Category"
-        >
-          <a-select-option
-            v-for="i in 25"
-            :key="(i + 9).toString(36) + i"
-          >{{(i + 9).toString(36) + i}}</a-select-option>
-        </a-select>-->
-        <a-button class="box" style="float:right" size="large" type="primary">Search</a-button>
-      </a-input-group>
-    </div>
-    <div class="left">
+<!--    <div class="top">-->
+<!--      <a-input-group class="input" compact>-->
+<!--        <a-input class="box" v-model="searchQuery" size="large" placeholder="enter your key words" />-->
+<!--        <a-button class="box" style="float:right" size="large" type="primary">Search</a-button>-->
+<!--      </a-input-group>-->
+<!--    </div>-->
+    <div class="bottom">
       <p class="title">Ideas similar to "{{searchQuery}}"</p>
 
       <a-layout-content :style="{ padding: '0 0px', margin: '0px' }">
@@ -39,17 +26,15 @@
 import store from "../store";
 import IdeaCard from "./IdeaCard";
 
+
 export default {
   components: { IdeaCard },
-  data: function() {
-    return { searchQuery: store.state.indexPageQuery };
-  },
   computed: {
     control() {
       return store.state.control;
     },
-    search() {
-      return store.state.search;
+    searchQuery() {
+      return store.state.query;
     },
     ideas() {
       const query = this.searchQuery.toLowerCase();
@@ -61,7 +46,10 @@ export default {
       });
     }
   },
-  mounted() {}
+  mounted() {
+    store.state.control.search = true;
+    store.state.control.index = false;
+  }
 };
 </script>
 
@@ -82,6 +70,18 @@ export default {
   top: 64px;
   left: 25%;
   width: 75%;
+}
+
+.top {
+  top: 64px;
+  position: fixed;
+  background: white;
+  width: 100%;
+}
+
+.bottom {
+  top: 64px;
+  position: fixed;
 }
 
 .right {

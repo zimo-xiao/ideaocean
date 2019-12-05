@@ -67,10 +67,13 @@ export default {
       return store.state.ideas;
     }
   },
-  mounted() {},
+  mounted() {
+    store.state.control.search = false;
+    store.state.control.index = true;
+  },
   methods: {
     onSearch: function() {
-      store.state.indexPageQuery = this.indexPageQuery;
+      store.state.query = this.indexPageQuery;
       this.$router.push("search");
     }
   }

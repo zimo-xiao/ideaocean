@@ -2,7 +2,7 @@
   <a-card :title="idea.title" class="card" @click="onOpenProject" hoverable>
     <icon
             type="star"
-            :theme="idea.saved? 'filled' : ''"
+            :theme="idea.saved? 'filled' : 'outlined'"
             slot="extra"
             style="color:#f4c74b"
             @click.stop="onSave">

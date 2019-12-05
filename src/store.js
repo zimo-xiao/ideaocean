@@ -11,10 +11,12 @@ const store = new Vuex.Store({
             composer: false,
             project: false,
             login: false,
-            register: false
+            register: false,
+            search: false,
+            index: true
         },
         ideas: ideas,
-        indexPageQuery: '',
+        query: '',
         currentViewingProject: {}
     }
 })

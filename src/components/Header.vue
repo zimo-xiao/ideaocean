@@ -9,16 +9,11 @@
         <p>Idea Ocean</p>
       </div>
     </a>
-    <!-- <a-menu
-      mode="horizontal"
-      :defaultSelectedKeys="['2']"
-      :style="{ lineHeight: '62px', borderBottom: '0px', backgroundColor: 'transparent' }"
-    >
-      <a-menu-item key="1">nav 2</a-menu-item>
-      <a-menu-item key="2">nav 3</a-menu-item>
-    </a-menu>-->
 
-    <a-button type="primary" class="menuButton" size="large">Welcome, Cornfield Warrior</a-button>
+    <div class="searchBoxContainer">
+      <a-input v-if="control.search" v-model="state.query" class="box searchbox" placeholder="Search the Ocean"></a-input>
+      <a-button type="primary" class="menuButton" size="large">Welcome, Cornfield Warrior</a-button>
+    </div>
 
     <!-- <a-button
       @click="control.register = true"
@@ -40,6 +35,9 @@ export default {
   computed: {
     control() {
       return store.state.control;
+    },
+    state() {
+      return store.state;
     }
   },
   mounted() {}
@@ -68,9 +66,23 @@ export default {
   font-family: "IdeaHeadlineBold";
 }
 
+.searchBoxContainer {
+  float: right;
+  width: 700px;
+  height: 64px;
+}
+
+.searchbox {
+  float: left;
+  width: 410px;
+  margin: 16px 0px 16px 8px;
+  top: 0;
+  bottom: 0;
+}
+
 .menuButton {
   height: 40px;
-  margin: 8px 0px 8px 8px;
+  margin: 13px 0px 13px 8px;
   float: right;
 }
 </style>
