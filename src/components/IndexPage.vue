@@ -12,7 +12,6 @@
             placeholder="what do you want to search?"
             @search="onSearch"
             v-model="indexPageQuery"
-            enterButton
             size="large"
             class="search"
             :style="{ position: 'relative', top: '0px', left: '0px', marginTop: '25px', marginBottom: '25px', marginLeft: '3%', width: '76%' }"
@@ -22,7 +21,6 @@
             size="large"
             @click="control.composer = true"
             :style="{ position: 'relative', top: '0px', left: '0px', marginTop: '25px', marginBottom: '25px', marginLeft: '2%', width: '16%' }"
-            ghost
           >
             <a-icon type="plus" />Add Idea
           </a-button>
