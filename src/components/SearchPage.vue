@@ -26,7 +26,7 @@
         <!-- cards start -->
         <a-row style="margin-bottom: 100px">
           <a-col :span="8" v-for="(idea, id) in ideas" :key="id">
-            <idea-card v-bind:idea="idea"></idea-card>
+            <idea-card style="width: 94%; margin-left: 3%; margin-bottom: 5%" v-bind:idea="idea"></idea-card>
           </a-col>
         </a-row>
         <!-- cards end -->
