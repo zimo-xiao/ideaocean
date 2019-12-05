@@ -7,7 +7,13 @@
     <!--      </a-input-group>-->
     <!--    </div>-->
     <div class="bottom">
-      <p class="title">Ideas similar to "{{searchQuery}}"</p>
+      <div v-if="ideas.length > 0">
+        <p class="title" v-if="searchQuery === ''">Ideas in the ocean</p>
+        <p class="title" v-else>Ideas similar to "{{searchQuery}}"</p>
+      </div>
+      <div v-else>
+        <p class="title">Sorry no ideas related to "{{searchQuery}}" is found. Maybe try being less specific?</p>
+      </div>
 
       <a-layout-content :style="{ padding: '0 0px', margin: '0px' }">
         <!-- cards start -->
