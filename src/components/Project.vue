@@ -34,7 +34,14 @@
             shape="round"
             icon="like"
           >{{project.votes}}</a-button>
-          <a-button class="vote" type="default" shape="round" icon="star">Favourite</a-button>
+          <a-button class="vote" type="default" shape="round" @click.stop="onSave">
+            <icon
+                    type="star"
+                    :theme="saved? 'filled' : 'outlined'"
+                    v-bind:style="{color: starColor}"
+                    />
+            Favourite
+          </a-button>
         </a-col>
       </div>
       <!-- like and favourite end -->
@@ -89,7 +96,14 @@ export default {
       return new Date(
         store.state.currentViewingProject.postTime
       ).toDateString();
+    },
+    starColor () {
+      return store.state.currentViewingProject.saved ? '#f4c74b' : '#000000';
+    },
+    saved () {
+      return store.state.currentViewingProject.saved;
     }
+
   },
   mounted() {},
   methods: {
@@ -99,16 +113,6 @@ export default {
         store.state.currentViewingProject.upvoted = true;
         store.state.currentViewingProject.votes += 1;
       } else {
-        store.state.currentViewingProject.upvoted = false;
-        store.state.currentViewingProject.votes -= 1;
-      }
-    },
-    downvote: function() {
-      if (!store.state.currentViewingProject.downvoted) {
-        store.state.currentViewingProject.downvoted = true;
-        store.state.currentViewingProject.votes -= 1;
-      }
-      if (store.state.currentViewingProject.upvoted) {
         store.state.currentViewingProject.upvoted = false;
         store.state.currentViewingProject.votes -= 1;
       }
@@ -126,6 +130,9 @@ export default {
       });
 
       this.commentInput = "";
+    },
+    onSave: function() {
+      store.state.currentViewingProject.saved = !store.state.currentViewingProject.saved;
     }
   }
 };

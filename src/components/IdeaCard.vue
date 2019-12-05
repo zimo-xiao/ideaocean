@@ -27,7 +27,6 @@ export default {
   },
   methods: {
     onSave: function() {
-      // We don't want to show card if save on the search page.
       this.idea.saved = !this.idea.saved
     },
     onOpenProject: function() {
