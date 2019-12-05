@@ -97,7 +97,8 @@ export default {
         comments: [],
         upvoted: false,
         downvoted: false,
-        votes: 0
+        votes: 0,
+        saved: false
       };
       store.state.ideas.push(newidea);
       store.state.currentViewingProject = newidea;
