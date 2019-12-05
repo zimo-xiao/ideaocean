@@ -109,7 +109,7 @@ export default {
         upvoted: false,
         downvoted: false,
         votes: 0,
-        saved: false
+        saved: true
       };
       store.state.ideas.push(newidea);
       store.state.currentViewingProject = newidea;
