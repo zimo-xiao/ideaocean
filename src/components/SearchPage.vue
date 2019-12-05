@@ -63,45 +63,8 @@ export default {
   width: 100%;
   font-family: "IdeaFontBold";
 }
-
-.left {
-  position: absolute;
-  top: 64px;
-  left: 25%;
-  width: 75%;
-}
-
-.top {
-  top: 64px;
-  position: fixed;
-  background: white;
-  width: 100%;
-}
-
 .bottom {
   top: 64px;
   position: relative;
-}
-
-.right {
-  position: fixed;
-  top: 64px;
-  left: 0px;
-  width: 25%;
-  background: white;
-  height: calc(100% - 64px);
-  overflow: scroll;
-  border-right: 1px solid #e8e8e8;
-}
-
-.input {
-  float: left;
-  margin-top: 20px;
-  margin-left: 5%;
-  width: 90%;
-}
-
-.box {
-  margin-top: 15px;
 }
 </style>

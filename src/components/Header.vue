@@ -11,7 +11,7 @@
     </a>
 
     <div class="searchBoxContainer">
-      <a-button type="primary" class="menuButton" size="large">Welcome, Cornfield Warrior</a-button>
+      <a-button href="/#/mycove" type="primary" class="menuButton" size="large">Welcome, Cornfield Warrior</a-button>
       <a-input-search
         v-model="state.query"
         class="box searchbox menuButton"
