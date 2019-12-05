@@ -14,13 +14,13 @@
             v-model="indexPageQuery"
             size="large"
             class="search"
-            :style="{ position: 'relative', top: '0px', left: '0px', marginTop: '25px', marginBottom: '25px', marginLeft: '3%', width: '76%' }"
+            :style="{position: 'relative', top: '0px', left: '0px', marginTop: '25px', marginBottom: '25px', marginLeft: '3%', width: '76%' }"
           />
           <a-button
             type="primary"
             size="large"
             @click="control.composer = true"
-            :style="{ position: 'relative', top: '0px', left: '0px', marginTop: '25px', marginBottom: '25px', marginLeft: '2%', width: '16%' }"
+            :style="{position: 'relative', top: '0px', left: '0px', marginTop: '25px', marginBottom: '25px', marginLeft: '2%', width: '16%' }"
           >
             <a-icon type="plus" />Add Idea
           </a-button>
@@ -140,11 +140,6 @@ export default {
   font-family: "IdeaFont";
 }
 
-.card {
-  width: 90%;
-  margin: 5%;
-}
-
 .card .cardContent {
   overflow: hidden;
   width: calc(100% - 0px);
@@ -157,4 +152,16 @@ export default {
   -webkit-line-clamp: 3;
   height: 60px;
 }
+
+  .search {
+    border: 2px solid #5caef2;
+    border-radius: 5px;
+  }
+
+  /*.ant-input:focus {*/
+  /*  border: solid;*/
+  /*  border-color: #5caef2;*/
+  /*  border-radius: 2px;*/
+  /*}*/
+
 </style>
