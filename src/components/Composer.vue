@@ -9,17 +9,14 @@
                     <a-icon type="close" @click="onCloseComposer()"/>
                 </p>
             </div>
-            <!-- input start -->
             <div class="container" v-if="step == 1" style="margin-top: -40px">
-                <a-input class="input" size="large" v-model="newIdea.title" placeholder="Title"/>
-
+                <a-input class="input" size="large" v-model="newIdea.title" placeholder="Summarize idea"/>
                 <a-textarea
                         class="input"
                         v-model="newIdea.description"
-                        placeholder="Description"
+                        placeholder="More details about the idea"
                         :rows="4"
                 />
-
                 <a-input-group class="input" compact>
                     <a-select defaultValue="Cornfield Warrior" v-model="newIdea.author">
                         <a-select-option value="Cornfield Warrior">Post As Cornfield Warrior</a-select-option>
@@ -28,31 +25,6 @@
                     <a-button style="float:right" type="primary" @click="onSubmitUniqueIdea">Submit Idea</a-button>
                 </a-input-group>
             </div>
-            <!-- input end -->
-
-            <!-- similar idea start -->
-            <div class="container" v-if="step == 2" style="margin-top: -40px">
-                <div class="input" style="width:100%" v-for="index in 4" :key="index">
-                    <a href="/#/?idea=1" target="_blank">
-                        <a-card title="Default size card" class="card">
-                            <a slot="extra">view in new tab</a>
-                            <p>card content</p>
-                            <p>card content</p>
-                            <p>card content</p>
-                        </a-card>
-                    </a>
-                </div>
-                <div class="input" style="width:100%;margin-bottom:30px;">
-                    <a-button style="float:right" type="primary" @click="onSubmitUniqueIdea">Submit Idea</a-button>
-                    <a-button
-                            style="float:right;margin-right:10px;"
-                            type="default"
-                            @click="step = 1"
-                    >Previous Step
-                    </a-button>
-                </div>
-            </div>
-            <!-- similar idea end -->
         </div>
     </div>
 </template>
@@ -121,7 +93,7 @@
         store.state.control.composer = false;
         store.state.control.project = true;
         this.$notification.success({
-          message: "New Idea '" + this.newIdea.title +  "' added"
+          message: "New Idea '" + this.newIdea.title + "' added"
         });
         this.newIdea.title = "";
         this.newIdea.description = "";
