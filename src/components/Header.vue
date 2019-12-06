@@ -14,9 +14,9 @@
       <a-button href="/#/mycove" type="primary" class="menuButton" size="large">Welcome, Cornfield Warrior</a-button>
       <a-input-search
         v-model="state.query"
-        v-if="state.control.search"
         class="box searchbox menuButton"
         placeholder="Search the Ocean"
+        @search="onSearch"
       ></a-input-search>
     </div>
 
@@ -45,7 +45,12 @@ export default {
       return store.state;
     }
   },
-  mounted() {}
+  mounted() {},
+  methods : {
+    onSearch : function() {
+      this.$router.push("search");
+    }
+  }
 };
 </script>
 
