@@ -138,7 +138,14 @@ export default {
       this.commentInput = "";
     },
     onSave: function() {
-      store.state.currentViewingProject.saved = !store.state.currentViewingProject.saved;
+      const idea = store.state.currentViewingProject;
+
+      if (!idea.saved) {
+        this.$notification.success({message : '"' + idea.title + '" added to my cove'});
+      } else {
+        this.$notification.error({message : '"' + idea.title + '" removed from my cove'});
+      }
+      idea.saved = !idea.saved;
     }
   }
 };

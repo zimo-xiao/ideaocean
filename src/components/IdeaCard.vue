@@ -27,6 +27,11 @@ export default {
   },
   methods: {
     onSave: function() {
+      if (!this.idea.saved) {
+        this.$notification.success({message : '"' + this.idea.title + '" added to my cove'});
+      } else {
+        this.$notification.error({message : '"' + this.idea.title + '" removed from my cove'});
+      }
       this.idea.saved = !this.idea.saved
     },
     onOpenProject: function() {
