@@ -12,7 +12,7 @@
         <p class="title" v-else>Ideas similar to "{{searchQuery}}"</p>
       </div>
       <div v-else>
-        <p class="title">Sorry no ideas related to "{{searchQuery}}" is found. Maybe try being less specific?</p>
+        <p class="title">Sorry no ideas related to "{{searchQuery}}" were found. Maybe try being less specific?</p>
       </div>
 
       <a-layout-content :style="{ padding: '0 0px', margin: '0px' }">
