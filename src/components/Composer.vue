@@ -1,6 +1,6 @@
 <template>
   <div v-if="control.composer">
-    <div class="floatBackground" @click="control.composer = false"></div>
+    <div class="floatBackground" @click="onCloseComposer"></div>
     <div class="floatWindow shadow">
       <div class="container">
         <p class="title" v-if="step == 1">Compose Idea</p>
@@ -84,6 +84,8 @@ export default {
         content: "Data might lost when you leave the compose page",
         onOk() {
           that.control.composer = false;
+          that.newIdea.title = "";
+          that.newIdea.description = "";
         },
         onCancel() {}
       });
@@ -115,8 +117,8 @@ export default {
       store.state.currentViewingProject = newidea;
       store.state.control.composer = false;
       store.state.control.project = true;
-      this.newIdea.title = ""
-      this.newIdea.description = ""
+      this.newIdea.title = "";
+      this.newIdea.description = "";
     }
   }
 };
