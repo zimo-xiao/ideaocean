@@ -115,6 +115,8 @@ export default {
       store.state.currentViewingProject = newidea;
       store.state.control.composer = false;
       store.state.control.project = true;
+      this.newIdea.title = ""
+      this.newIdea.description = ""
     }
   }
 };
