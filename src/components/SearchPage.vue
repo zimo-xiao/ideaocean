@@ -54,6 +54,7 @@ export default {
   mounted() {
     store.state.control.search = true;
     store.state.control.index = false;
+    store.state.control.mycove = false;
   }
 };
 </script>

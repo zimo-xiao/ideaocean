@@ -68,6 +68,7 @@ export default {
   mounted() {
     store.state.control.search = false;
     store.state.control.index = true;
+    store.state.control.mycove = false;
   },
   methods: {
     onSearch: function() {

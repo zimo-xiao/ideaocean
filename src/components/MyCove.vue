@@ -30,7 +30,11 @@
                 });
             }
         },
-        mounted() {}
+        mounted() {
+          store.state.control.search = false;
+          store.state.control.index = false;
+          store.state.control.mycove = true;
+        }
     };
 </script>
 
