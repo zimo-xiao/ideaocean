@@ -11,10 +11,11 @@
     </a>
 
     <div class="searchBoxContainer">
-      <a-button href="/#/mycove" type="primary" class="menuButton" size="large">Welcome, Cornfield Warrior</a-button>
+      <a-button href="/#/mycove" :type="control.index ? 'default' : 'primary'" class="menuButton" size="large">Welcome, Cornfield Warrior</a-button>
       <a-input-search
         v-model="state.query"
         class="box searchbox menuButton"
+        v-if="!control.index"
         placeholder="Search the Ocean"
         @search="onSearch"
       ></a-input-search>

@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      :style="{ width: '100%', height: primaryElemHeight, zIndex: '100', position: 'absolute', backgroundColor: '#97C9FA' }"
+      :style="{ width: '100%', height: primaryElemHeight, zIndex: '3', position: 'absolute', backgroundColor: '#97C9FA' }"
     >
       <div class="primaryHeaderCenterContent">
         <img src="../assets/logo.png" />
